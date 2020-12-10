@@ -1,0 +1,403 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	background: #f4f4f4;
+	line-height: 1.5em;
+}
+
+h6 {
+	font-weight: normal;
+	display: inline-block;
+}
+
+header {
+	background: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	border-bottom: 4px solid #0275d8;
+	margin-bottom: 10px;
+	line-height: 70px;
+}
+
+p {	padding-bottom: 15px; }
+
+p.err,
+span.err {
+    color: red;
+	font-size: 80%;
+}
+
+/********** CONTAINERS **********/
+
+.container {
+	width: 80%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.table-container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+section {
+/*	width: 100%;*/
+	margin: 0 auto;
+/*	margin-top: 25px;*/
+}
+
+.grid-container	{
+	display: grid;
+	grid-template-columns: 190px 260px auto;
+	grid-row-gap: 10px;
+	position: relative;
+}
+
+.grid-container-2-col {
+	display: grid;
+	width: 50%;
+	grid-template-columns: 120px auto;
+	grid-row-gap: 10px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container > label,
+.flex-container > div, 
+.flex-container > button {
+    margin-right: 15px;
+}
+
+.flex-container-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-col > div {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+input[type="radio"] {
+	width: 40px;
+    cursor: pointer;
+}
+
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+/*	width: 100px;*/
+}
+
+.grid-container p {
+	align-self: flex-end;
+	padding-bottom: 0;
+}
+
+/********** TOGGLE ACCORDION **********/
+
+.toggle {
+    cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+    font-size: 150%;
+}
+
+.index-toggle {
+    background-color: #eee;
+	color: #444;
+}
+
+.active {
+	background-color: #0275d8;
+	color: #fff;
+}
+
+.panel {
+	padding: 15px 15px;
+	display: none;
+	overflow: hidden;
+}
+
+.index-toggle:after {
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    float: right;
+}
+.active:after {
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+    float: right;
+}
+
+.table-toggle {
+    background: #0275d8;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.toggle:hover,
+.table-toggle:hover { color: #fff; }
+
+.table-toggle:after {
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+    float: right;
+}
+
+.inactive {
+    background: #eee;
+	color: #444;
+}
+
+.inactive:after { content: '\002B'; /* Unicode character for "plus" sign (+) */ }
+
+.table-panel {
+	padding: 15px 15px;
+	display: block;
+	overflow: hidden;
+}
+
+/********** FORMS **********/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+}
+
+#dataTable {
+    min-width: 100%;
+}
+
+
+
+#dataTable tfoot input {
+    max-width: 155px;
+}
+
+.panel input {
+	width: 255px;
+}
+
+
+
+/*.grid-container label,*/
+.grid-container input,
+.grid-continaer select {
+	align-self: center;
+}
+
+select {
+	cursor: pointer;
+    padding: 9px;
+}
+
+/********** CHECKBOX **********/
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #666;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+	background-color: #333;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+	background-color: #0275d8;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/********** TABLE **********/
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+/*	padding-top: 5px;*/
+	table-layout: fixed;
+	text-overflow: ellipsis;
+}
+
+
+.table-panel input {
+    width: 60px;
+    height: 25px;
+}
+
+
+.flex-container button {
+    height: 25px;
+    width: 75px;
+    padding: 0;
+}
+
+button.btn-remove {
+    background: #0275d8;
+    width: 25px;
+}
+
+button.btn-remove:hover {
+    background: #000;
+}
+
+button.btn-remove:active {
+    background: #333;
+}
+
+
+thead tr,
+tfoot tr { background: #0275d8; }
+
+header button,
+form button,
+form input[type="button"] {
+	background: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+	width: 125px;
+	cursor: pointer;
+}
+
+nav.navbar {
+	position: absolute;
+/*	right: 0px;*/
+/*	top: 0;*/
+	border: 1px solid black;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	width: 80%;
+	max-width: 98%;
+}
+
+nav.navbar button {
+	position: absolute;
+	right: 0px;
+	top: 74px;
+	background: #0275d8;
+	border-bottom: 4px solid #0275d8;
+}
+
+nav.navbar button:hover {
+	background: #e74c3c;
+	border-bottom: 4px solid #e74c3c;
+}
+
+nav.navbar button:active {
+    background: #0275d8;
+    border-bottom: 4px solid #0275d8;
+}
+
+button:hover,
+form input[type="button"]:hover {
+	background: #0275d8;
+}
+
+button:active {
+    background: #e74c3c;
+}
+
+button:focus { outline:0; }
+
+input[type="text"]:hover,
+input[type="text"]:focus { outline-color: #0275d8; }
+
+
+
+
+/* set placeholder to transparent */
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+    cursor: text, auto;
+}
+
+input:focus: -moz-placeholder {
+    color: transparent;
+    cursor: text, auto;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #999;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
