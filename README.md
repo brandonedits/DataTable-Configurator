@@ -1,5 +1,5 @@
 # DataTable Configurator
-> Use DataTable Configurator to connect to a database. Table columns are displayed using DataTables. Configure your DataTable using the controls below the DataTable.
+> Use DataTable Configurator to connect to a database. Table columns are displayed using DataTables. Enable or disable DataTable extensions and plugins on the fly with custom controls.
 
 ## Deployment Instructions
 
