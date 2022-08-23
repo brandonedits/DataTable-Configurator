@@ -16,7 +16,7 @@
 			<form action="" method="post">
     			<div class="grid-container">
     				<label for="db_host">DB Host:</label>
-    				<input type="text" name="db_host" id="db_host" value="<?php echo (!empty($data['db_host'])) ? $data['db_host'] : ''; ?>">
+    				<input type="text" name="db_host" id="db_host" value="<?php echo (!empty($data['db_host'])) ? $data['db_host'] : 'localhost'; ?>">
     				<p class="err"><?php echo isset($data['db_host_err']) ? $data['db_host_err'] : ''; ?></p>
     				
     				<label for="db_name">DB Name:</label>
@@ -24,7 +24,7 @@
     				<p class="err"><?php echo isset($data['db_name_err']) ? $data['db_name_err'] : ''; ?></p>
     				
     				<label for="db_user">DB Username:</label>
-    				<input type="text" name="db_user" id="db_user" value="<?php echo (!empty($data['db_user'])) ? $data['db_user'] : ''; ?>">
+    				<input type="text" name="db_user" id="db_user" value="<?php echo (!empty($data['db_user'])) ? $data['db_user'] : 'root'; ?>">
     				<p class="err"><?php echo isset($data['db_user_err']) ? $data['db_user_err'] : ''; ?></p>
     				
     				<label for="db_pass">DB Password:</label>

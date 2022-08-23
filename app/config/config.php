@@ -4,10 +4,10 @@
     define('APPROOT', dirname(dirname(__FILE__)));
 
     // URL Root - FRONT END
-    define('URLROOT', 'http://localhost/final_project');
+    define('URLROOT', 'http://localhost/DataTable-Configurator');
 
     // Site Name
-    define('SITENAME', 'dataTables');
+    define('SITENAME', 'DataTable-Configurator');
 
 	// Errors
 	define('REQUIREDMSG', 'Required');

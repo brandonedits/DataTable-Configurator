@@ -23,9 +23,9 @@
         // Constructor
         public function __construct(){
 			
-			$this->host   = isset($_SESSION['db_host']) ? $_SESSION['db_host'] : null;
-			$this->user   = isset($_SESSION['db_user']) ? $_SESSION['db_user'] : null;
-			$this->pass   = isset($_SESSION['db_pass']) ? $_SESSION['db_pass'] : null;
+			$this->host   = isset($_SESSION['db_host']) ? $_SESSION['db_host'] : 'localhost';
+			$this->user   = isset($_SESSION['db_user']) ? $_SESSION['db_user'] : 'root';
+			$this->pass   = isset($_SESSION['db_pass']) ? $_SESSION['db_pass'] : '';
 			$this->dbname = isset($_SESSION['db_name']) ? $_SESSION['db_name'] : null;
             
             // Set DSN
