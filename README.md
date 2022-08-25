@@ -3,7 +3,8 @@
 
 ## Deployment Instructions
 
-- Direct browser to: http://localhost/datatable-configurator/v.ICS325/ for working version submitted for ICS 325
+- Direct browser to: http://localhost/datatable-configurator/v.ICS325/ for working version submitted for ICS 325.
+- CMS used in v.325 was built on the TraversyMVC PHP framework (https://www.udemy.com/course/object-oriented-php-mvc/).
 - Direct browser to: http://localhost/datatable-configurator/ for UI overhaul (in production) version.
 
 
