@@ -10,5 +10,5 @@
 
 ## Future Enhancements
 
-- UI overhaul
+- UI overhaul (in-production).
 - Display the code needed to output the DataTable you configured.
