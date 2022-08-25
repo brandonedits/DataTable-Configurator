@@ -4,7 +4,7 @@
 ## Deployment Instructions
 
 - Direct browser to: http://localhost/datatable-configurator/v.ICS325/ for working version submitted for ICS 325
-- Direct browser to: http://localhost/datatable-configurator/UI/ for UI overhaul (in production) version.
+- Direct browser to: http://localhost/datatable-configurator/ for UI overhaul (in production) version.
 
 
 ## Future Enhancements
