@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #efefef;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+p {	padding-bottom: 18px; }
+
+header {
+    background: #333;
+    color: #efefef;
+    font-size: 1.5rem;
+    line-height: 56px;
+    margin-bottom: 10px;
+}
+
+header input {
+    border: 0;
+    background: #efefef;
+    margin-left: auto;
+    height: 28px;
+    align-self: center;
+    display: none;
+}
+
+#tables,
+#columns {
+    margin-top: 10px;
+}
+
+#tables,
+#columns,
+#dataTable {
+    display: none;
+}
+
+/********** CONTAINERS **********/
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 115px auto;
+    align-items: center;
+    grid-row-gap: 10px;
+}
+
+.grid-container-2-col {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 8px;
+    column-gap: 5px;
+}
+
+/********** TOGGLE ACCORDION **********/
+
+.toggle {
+    background: #a0a1a4;
+    background: #ccc;
+    color: #333;
+    font-size: 1.3rem;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	transition: 0.5s;
+}
+.toggle:hover {
+    background: #0275d8;
+    color: #fff;
+}
+
+.toggle:after {     
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    float: right;
+}
+
+.active {
+	background: #0275d8;
+	color: #efefef;
+}
+
+.active:after {
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+    float: right;
+}
+
+.panel {
+	padding: 18px 18px;
+	overflow: hidden;
+}
+
+/********** FORMS **********/
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+button {
+    background: #333;
+    color: #efefef;
+    padding: 11px 16px;
+    border: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0275d8;
+}
+
+select {
+	cursor: pointer;
+    padding: 9px;
+}
+
+/********** CHECKBOXES **********/
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox-container label {
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+}
+
+/* hide default checkbox */
+.checkbox-container input[type='checkbox']{
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-container label::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+    background: #666;
+}
+
+.checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+    background: #333;
+}
+
+.checkbox-container input[type='checkbox']:focus + label::before {
+    box-shadow: 0 0 20px #000;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+    content: '\002714';
+    background: #0275d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #efefef;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label::before {
+    background-color: #ccc;
+}

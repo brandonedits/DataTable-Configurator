@@ -6,10 +6,10 @@
 html,
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-weight: normal;
+	/* font-size: 16px; */
+	/* font-weight: normal; */
 	background: #f4f4f4;
-	line-height: 1.5em;
+	/* line-height: 1.5em; */
 }
 
 h6 {
@@ -328,36 +328,7 @@ form input[type="button"] {
 	cursor: pointer;
 }
 
-nav.navbar {
-	position: absolute;
-/*	right: 0px;*/
-/*	top: 0;*/
-	border: 1px solid black;
-	left: 0;
-	right: 0;
-	top: 0;
-	margin: auto;
-	width: 80%;
-	max-width: 98%;
-}
 
-nav.navbar button {
-	position: absolute;
-	right: 0px;
-	top: 74px;
-	background: #0275d8;
-	border-bottom: 4px solid #0275d8;
-}
-
-nav.navbar button:hover {
-	background: #e74c3c;
-	border-bottom: 4px solid #e74c3c;
-}
-
-nav.navbar button:active {
-    background: #0275d8;
-    border-bottom: 4px solid #0275d8;
-}
 
 button:hover,
 form input[type="button"]:hover {
@@ -400,4 +371,51 @@ select:-webkit-autofill:focus {
     border: 1px solid #999;
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NOT using in v2.0 */
+nav.navbar {
+	position: absolute;
+	border: 1px solid #333;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	width: 80%;
+	max-width: 98%;
+}
+
+nav.navbar button {
+	position: absolute;
+	right: 0px;
+	top: 74px;
+	background: #0275d8;
+	border-bottom: 4px solid #0275d8;
+}
+
+nav.navbar button:hover {
+	background: #e74c3c;
+	border-bottom: 4px solid #e74c3c;
+}
+
+nav.navbar button:active {
+    background: #0275d8;
+    border-bottom: 4px solid #0275d8;
 }
